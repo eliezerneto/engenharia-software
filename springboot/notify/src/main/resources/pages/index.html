@@ -1,0 +1,45 @@
+<html th:replace="~{..\templates\base.html :: layout (~{:: main})}">
+
+<body>
+    <main>
+
+        <div class="example col-md-10 ml-auto mr-auto">
+            <a th:href="@{/showNewApplicationForm}" class="btn btn-outline-primary"
+                style="margin-bottom: 10px;margin-left: 0px;"><i class="fa fa-plus mr-1"></i>Adicionar Aplicativo</a>
+            <table class="table table-striped table-responsive-md">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome Aplicativo</th>
+                        <th>Web Push</th>
+                        <th>E-mail</th>
+                        <th>SMS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="app : ${listApplication}">
+                        <td th:text="${app.id}"></td>
+                        <td th:text="${app.name}"></td>
+                        <td th:text="${app.webPush}"></td>
+                        <td th:text="${app.email}"></td>
+                        <td th:text="${app.sms}"></td>
+                        <td> <a th:href="@{/showFormForUpdate/{id}(id=${app.id})}" class="btn btn-outline-primary"><i
+                                    class="fa fa-edit mr-1"></i>Atualizar</a>
+                            <a th:href="@{/deleteApplication/{id}(id=${app.id})}" class="btn btn-outline-danger"><i
+                                    class="fa fa-remove mr-1"></i>Apagar</a>
+                            <a th:href="@{/deleteEmployee/{id}(id=${app.id})}" class="btn btn-outline-secondary"><i
+                                    class="fa fa-history mr-1"></i>Histórico</a>
+                            <a th:href="@{/deleteEmployee/{id}(id=${app.id})}" class="btn btn-outline-secondary"><i
+                                    class="fa fa-share-square-o mr-1"></i>Envio
+                                Manual</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

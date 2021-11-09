@@ -1,0 +1,97 @@
+<html th:replace="~{..\templates\base.html :: layout (~{:: main})}">
+
+<body>
+    <main>
+        <!-- Form Controls -->
+        <div id="forms" class="container mb-5">
+            <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
+                <h3 class="mb-4">Aplicativo - Atualização</h3>
+                <p>Nesta aba você deve atualizar um aplicativo, para que possa fazer a integração com seu sistema.
+                </p>
+            </div>
+
+            <!-- Form Controls - Simple Forms: Default / Using Icons (Seamless) -->
+            <div class="example col-lg-8 col-md-10 ml-auto mr-auto">
+
+                <!-- Form Controls: Simple Forms -->
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <form action="#" th:action="@{/saveApplication}" th:object="${application}" method="POST">
+
+                            <input type="hidden" th:field="*{id}" />
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form1-name" class="col-form-label">Nome</label>
+                                    <input type="text" th:field="*{name}" class="form-control" id="form1-name"
+                                        placeholder="Nome do aplicativo" />
+                                </div>
+                            </div>
+                            <div class="row"></div>
+                            <div class="custom-controls-example">
+                                <label class="col-form-label">Canais desejados de
+                                    integração:</label>
+                                <fieldset>
+                                    <div class="custom-control custom-toggle d-block my-2">
+                                        <input type="checkbox" th:field="*{webPush}" id="customToggle1"
+                                            name="customToggle1" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="customToggle1">Web Push</label>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <div class="custom-control custom-toggle d-block my-2">
+                                        <input type="checkbox" th:field="*{email}" id="customToggle2"
+                                            name="customToggle2" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="customToggle2">E-mail</label>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <div class="custom-control custom-toggle d-block my-2">
+                                        <input type="checkbox" th:field="*{sms}" id="customToggle3" name="customToggle3"
+                                            class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="customToggle3">SMS</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="mb-4 row">
+                                <div class="col-md-3 ml-auto mr-auto d-flex justify-content-around buttons-wrapper">
+                                    <a th:href="@{/}" class="btn btn-primary">Voltar</a>
+                                    <button th:href="@{/}" type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="main-footer py-5">
+            <p class="text-muted text-center small p-0 mb-4">&copy; Copyright 2018 — DesignRevision</p>
+            <div class="social d-table mx-auto">
+                <a class="twitter mx-3 h4 d-inline-block text-secondary" href="https://twitter.com/DesignRevision"
+                    target="_blank">
+                    <i class="fa fa-twitter"></i>
+                    <span class="sr-only">View our Twitter Profile</span>
+                </a>
+                <a class="facebook mx-3 h4 d-inline-block text-secondary" href="https://www.facebook.com/designrevision"
+                    target="_blank">
+                    <i class="fa fa-facebook"></i>
+                    <span class="sr-only">View our Facebook Profile
+                        <span>
+                </a>
+                <a class="github mx-3 h4 d-inline-block text-secondary" href="https://github.com/designrevision"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                    <span class="sr-only">View our GitHub Profile</span>
+                </a>
+            </div>
+        </footer>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>

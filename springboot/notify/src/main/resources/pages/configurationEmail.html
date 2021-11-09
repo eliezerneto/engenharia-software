@@ -1,0 +1,95 @@
+<html th:replace="~{..\templates\base.html :: layout (~{:: main})}">
+
+<body>
+    <main>
+        <!-- Form Controls -->
+        <div id="forms" class="container mb-5">
+            <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
+                <h3 class="mb-4">Form Controls</h3>
+                <p>All form controls are improved with micro-transitions and shadows that bring depth and improve
+                    the overall
+                    user
+                    experience.
+                </p>
+            </div>
+
+            <!-- Form Controls - Simple Forms: Default / Using Icons (Seamless) -->
+            <div class="example col-lg-8 col-md-10 ml-auto mr-auto">
+                <h5>Welcome to <span th:text="${appName}">Our App</span></h5>
+
+                <!-- Form Controls: Simple Forms -->
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form1-name" class="col-form-label">Name</label>
+                                    <input type="text" class="form-control" id="form1-name" placeholder="Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="form1-email" class="col-form-label">Email</label>
+                                    <input type="email" class="form-control" id="form1-email" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="form1-password">Password</label>
+                                    <input type="password" class="form-control" id="form1-password"
+                                        placeholder="Password" required>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <label for="form1-state">State</label>
+                                    <select class="custom-select" id="form1-state">
+                                        <option value="" selected>Choose One</option>
+                                        <option value="1">California</option>
+                                        <option value="2">Virginia</option>
+                                        <option value="3">Texas</option>
+                                        <option value="4">Florida</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3 mb-4">
+                                    <label for="form1-zip">Zip</label>
+                                    <input type="text" class="form-control" id="form1-zip" placeholder="Zip" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- Outlined Buttons -->
+                <div class="mb-5 row">
+                    <div class="col-md-9 ml-auto mr-auto d-flex justify-content-around buttons-wrapper">
+                        <button type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+
+                <footer class="main-footer py-5">
+                    <p class="text-muted text-center small p-0 mb-4">&copy; Copyright 2018 — DesignRevision</p>
+                    <div class="social d-table mx-auto">
+                        <a class="twitter mx-3 h4 d-inline-block text-secondary"
+                            href="https://twitter.com/DesignRevision" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            <span class="sr-only">View our Twitter Profile</span>
+                        </a>
+                        <a class="facebook mx-3 h4 d-inline-block text-secondary"
+                            href="https://www.facebook.com/designrevision" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                            <span class="sr-only">View our Facebook Profile
+                                <span>
+                        </a>
+                        <a class="github mx-3 h4 d-inline-block text-secondary" href="https://github.com/designrevision"
+                            target="_blank">
+                            <i class="fa fa-github"></i>
+                            <span class="sr-only">View our GitHub Profile</span>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
